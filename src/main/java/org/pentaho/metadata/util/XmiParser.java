@@ -165,7 +165,7 @@ public class XmiParser {
     Document doc;
     try {
       // create an XML document
-      DocumentBuilderFactory dbf = XMLParserFactoryProducer.createSecureDocBuilderFactory();
+      DocumentBuilderFactory dbf = XmiParser.createSecureDocBuilderFactory();
       DocumentBuilder db = dbf.newDocumentBuilder();
       doc = db.newDocument();
       Element xmiElement = doc.createElement( "XMI" ); //$NON-NLS-1$
@@ -1043,7 +1043,7 @@ public class XmiParser {
 
     // Check and open XML document
     try {
-      DocumentBuilderFactory dbf = XMLParserFactoryProducer.createSecureDocBuilderFactory();
+      DocumentBuilderFactory dbf = XmiParser.createSecureDocBuilderFactory();
       DocumentBuilder db = dbf.newDocumentBuilder();
       doc = db.parse( new InputSource( xmi ) );
     } catch ( ParserConfigurationException pcx ) {
